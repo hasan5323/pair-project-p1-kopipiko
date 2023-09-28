@@ -13,7 +13,10 @@ module.exports = (sequelize, DataTypes) => {
     static associate(models) {
       // define association here
       Item.belongsTo(models.Category)
-      Item.hasMany(models.Transaction, {through: models.TransactionItems })
+      Item.hasMany(models.TransactionItems)
+      // Item.belongsToMany((models.Transaction, {through: "TransactionItems", foreignKey: "ItemId" }))
+
+
     }
   }
   Item.init({

@@ -2,6 +2,7 @@
 const {
   Model
 } = require('sequelize');
+
 module.exports = (sequelize, DataTypes) => {
   class TransactionItems extends Model {
     /**
@@ -11,8 +12,8 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
-      Transaction.belongsToMany((models.Item, {through: models.TransactionItems }))
-      Item.belongsToMany((models.Transaction, {through: models.TransactionItems }))
+      TransactionItems.belongsTo(models.Transaction)
+      TransactionItems.belongsTo(models.Item)
 
     }
   }

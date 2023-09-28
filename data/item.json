@@ -1,0 +1,44 @@
+[
+    {
+        "id":1,
+        "name":"lemari",
+        "isHuge": true,
+        "isLiquid": false,
+        "CategoryId": 1
+    },
+    {
+        "id":2,
+        "name":"kursi",
+        "isHuge": false,
+        "isLiquid": false,
+        "CategoryId": 1
+    },
+    {
+        "id":3,
+        "name":"meja",
+        "isHuge": true,
+        "isLiquid": false,
+        "CategoryId": 1
+    },
+    {
+        "id":4,
+        "name":"komputer",
+        "isHuge": true,
+        "isLiquid": false,
+        "CategoryId": 2
+    },
+    {
+        "id":5,
+        "name":"sepeda",
+        "isHuge": false,
+        "isLiquid": false,
+        "CategoryId": 3
+    },
+    {
+        "id":6,
+        "name":"TV",
+        "isHuge": false,
+        "isLiquid": false,
+        "CategoryId": 2
+    }
+]

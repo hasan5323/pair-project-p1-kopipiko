@@ -9,13 +9,34 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
-      Transaction.hasMany(models.Item, {through: models.TransactionItems })
-
+      Transaction.belongsTo(models.User);
+      Transaction.hasMany(models.TransactionItems);
+      // Transaction.belongsToMany((models.Item, {through: "TransactionItems", foreignKey: "TransactionId" }))
     }
+    static relatedTransaction(id) {
+      return Transaction.findAll({
+        where: {
+          UserId: id,
+        },
+      });
+    }
+    paidStatus(boolean){
+      if(boolean) {
+        return `terbayar`
+      }else {
+        return `pending`
+      }
+    } 
+    doneStatus(boolean){
+      if(boolean) {
+        return `selesai`
+      }else {
+        return `pending`
+      }
+    } 
   }
   Transaction.init(
     {
-      name: DataTypes.STRING,
       pickUpLocation: DataTypes.STRING,
       dropLocation: DataTypes.STRING,
       bill: DataTypes.INTEGER,
