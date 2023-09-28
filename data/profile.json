@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "firstName": "Mo",
+    "lastName": "Salah",
+    "phone": 99888233,
+    "address": "London"
+  },
+  {
+    "id": 3,
+    "firstName": "Cristiano",
+    "lastName": "Ronaldo",
+    "phone": 992,
+    "address": "Barcelona"
+  },
+  {
+    "id": 3,
+    "firstName": "Ibrahimovic",
+    "lastName": "Ibrahimovic",
+    "phone": 934343,
+    "address": "Paris"
+  },
+  {
+    "id": 4,
+    "firstName": "Admin",
+    "lastName": "Admin",
+    "phone": 999,
+    "address": "Skyrim"
+  }
+]

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>client</title>
+    <style>
+        table th {
+            background-color: orangered;
+        }
+    </style>
+</head>
+<body>
+    <h1>you are logged in as </h1>
+    <h3>Role:  Driver/Customer </h3>
+    <p><button><a href="">show profile</a></button> for this user</p>
+    <p>completed transaction<button><a href="">history</a></button> for this user</p>
+<p>logout here <a href="/login">logout</a></p>
+    <div class="positionflex">
+        <button><a href="/employees">All</a></button>
+        <button><a href="/employees?filter=Staff">unpaid</a></button>
+        <button><a href="/employees?filter=Supervisor">undone</a></button>
+      </div>
+      <table>
+        <tr>
+            <th>id</th>
+            <th>Pick Up Location</th>
+            <th>Drop Location</th>  
+            <th>jumlah biaya</th>
+            <th>status pengerjaan</th>
+            <th>status pembayaran</th>
+            <th>item list</th>
+            <th>action</th>
+        </tr>
+        <tr>
+            <td></td>
+        </tr>
+      </table>
+</body>
+</html>

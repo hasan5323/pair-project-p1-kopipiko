@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>client</title>
+    <style>
+        table th {
+            background-color: orangered;
+        }
+    </style>
+</head>
+<body>
+    <h1>you are logged in as <%= result.username %></h1>
+    <h3>Role:  <%= result.role %> </h3>
+    <p><button><a href="/profile/<%= result.ProfileId %>">show profile</a></button> for this user</p>
+    <p>completed transaction<button><a href="/done">history</a></button> for this user</p>
+<p>logout here <a href="/login">logout</a></p>
+    <div class="positionflex">
+        <button><a href="/landing?username=<%= result.username %>">All</a></button>
+        <button><a href="/landing?username=<%= result.username %>?filter=unpaid">unpaid</a></button>
+        <button><a href="/landing?username=<%= result.username %>?filter=undone">undone</a></button>
+      </div>
+      <table>
+        <tr>
+            <th>id</th>
+            <th>Pick Up Location</th>
+            <th>Drop Location</th>  
+            <th>jumlah biaya</th>
+            <th>status pengerjaan</th>
+            <th>status pembayaran</th>
+            <th>action</th>
+        </tr>
+        <% related.forEach((el)=>{ %>
+        <tr>
+            <td><%= el.id %></td>
+            <td><%= el.pickUpLocation %></td>
+            <td><%= el.dropLocation %></td>  
+            <td><%= formatCurrentcy(el.bill) %></td>
+            <td><%= el.doneStatus(el.isDone) %></td>
+            <td><%= el.paidStatus(el.isPaid) %></td>
+            <td>
+                <button><a href="">item list</a></button>
+            </td>
+        </tr>
+        <% }) %>
+      </table>
+</body>
+</html>

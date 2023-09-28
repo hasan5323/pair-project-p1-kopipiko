@@ -1,0 +1,41 @@
+[
+    {
+        "id": 1,
+        "pickUpLocation": "jakarta",
+        "dropLocation": "samarinda",
+        "bill": 5000000,
+        "isDone": false,
+        "isPaid": false,
+        "UserId": 1
+    },
+    {
+        "id": 2,
+        "pickUpLocation": "medan",
+        "dropLocation": "jakarta",
+        "bill": 4500000,
+        "isDone": true,
+        "isPaid": false,
+        "UserId": 1
+
+    },
+    {
+        "id": 3,
+        "pickUpLocation": "bali",
+        "dropLocation": "mataram",
+        "bill": 3000000,
+        "isDone": true,
+        "isPaid": true,
+        "UserId": 2
+
+    },
+    {
+        "id": 4,
+        "pickUpLocation": "gorontalo",
+        "dropLocation": "manado",
+        "bill": 4000000,
+        "isDone": false,
+        "isPaid": true,
+        "UserId": 3
+
+    }
+]
