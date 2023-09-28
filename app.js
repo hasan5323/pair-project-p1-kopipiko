@@ -2,6 +2,7 @@ const express = require('express');
 const session = require('express-session');
 const bcrypt = require('bcryptjs');
 const app = express();
+const port = 3000
 app.set("view engine", "ejs")
 app.use(express.urlencoded({ extended: false }));
 app.use(session({
@@ -32,7 +33,7 @@ const sessionValidator = (req, res, next) => {
 
 // Login page
 app.get('/login', (req, res) => {
-  res.send('<h1>Login Page</h1><form method="POST" action="/login"><label for="username">Username:</label><input type="text" id="username" name="username" required><br><label for="password">Password:</label><input type="password" id="password" name="password" required><br><button type="submit">Login</button></form>');
+  res.render('home');
 });
 
 // Login endpoint

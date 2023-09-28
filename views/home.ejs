@@ -1,25 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>hando | moving Company</title>
     <style>
-        .container {
-            background: url();
-        }
+      .form {
+        display: flex;
+      }
+      button {
+        font-size: 50px;
+        padding: 10px 30px;
+        margin: 10px 30px;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <div class="container">
-        <h1>HANDO ONLINE LOGIN</h1>
-        <form action="/">
-            <label for="username">Username</label><br>
-            <input type="text" name="username"><br>
-            <label for="username">Username</label><br>
-            <input type="text" name="username"><br>
-        </form>
-        <img src="../assets/loginimage.jpg" alt="login image">
+      <h1>HANDO ONLINE LOGIN</h1>
+      <form action="/login" method="post" class="form">
+        <div class="inputs">
+          <label for="username">Username</label><br />
+          <input type="text" name="username" required/><br />
+          <label for="username">Password</label><br />
+          <input type="text" name="password" required/><br />
+        </div>
+        <div class="">
+          <button type="submit">login</button>
+        </div>
+      </form>
+      <!-- <div class="image">
+          <img src="../assets/loginimage.jpg" alt="login image" />
+      </div> -->
     </div>
-</body>
+  </body>
 </html>
