@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <nav>
+      <button><a href="">landing</a></button>
+      <button><a href="">add transaction</a></button>
+    </nav>
+    <h1>HISTORY</h1>
+    <table border="1">
+      <tr>
+        <th>No</th>
+        <th>Pick Up Location</th>
+        <th>Drop off Location</th>
+        <th>bill</th>
+        <th>Item Count</th>
+        <th>action</th>
+      </tr>
+      <% transactions.forEach((el,idx)=>{ %>
+      <tr>
+        <th><%= idx+1 %></th>
+        <th><%= el.pickUpLocation %></th>
+        <th><%= el.dropLocation %></th>
+        <th><%= el.bill %></th>
+        <th><%= el.itemCount %></th>
+        <th>action</th>
+      </tr>
+      <% }) %>
+    </table>
+  </body>
+</html>
+

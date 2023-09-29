@@ -1,4 +1,5 @@
 
+</html>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -11,7 +12,7 @@
       }
 
       .others {
-        margin-top: 20px;
+margin: 20px;
         display: flex;
         flex-direction: column;
         text-align: left;
@@ -25,8 +26,16 @@
       }
       .container {
         display: flex;
-        flex-direction: column;
-        text-align: left;
+        flex-direction: row;
+        border: 1px dotted black;
+      }
+      button {
+        justify-content: center;
+        padding: 10px;
+      }
+      .item {
+        padding: 10px;
+        border: 1px solid black;
       }
     </style>
   </head>
@@ -36,37 +45,51 @@
       <button><a href="">add transaction</a></button>
     </nav>
     <h1>Add Transaction</h1>
-    <div class="container">
-      <form action="/add" method="post">
+    <form action="/add" method="post">
+          <div class="container">
+            <div class="others">
                 <label for="pickUpLocation">Pick Up Location</label><br />
                 <input type="text" name="pickUpLocation" id="" required /><br />
         <label for="dropLocation">Drop Off Location</label><br />
         <input type="text" name="dropLocation" id="" required /><br />
         <label for="bill">Bill</label><br />
         <input type="number" name="bill" /><br /><br />
+    </div>
+        <div class="additem">
+            <div class="item">
                 <label for="name1">Item Name</label><br />
                 <input type="text" name="name1" /><br />
                 <label for="category1">Category</label><br>
                 <input type="text" name="category1" /><br>
+            </div>
+            <div class="item">
                 <label for="name2">Item Name</label><br />
                 <input type="text" name="name2" /><br />
                 <label for="category2">Category</label><br>
                 <input type="text" name="category2" /><br>
+            </div>
+            <div class="item">
                 <label for="name3">Item Name</label><br />
                 <input type="text" name="name3" /><br />
                 <label for="category3">Category</label><br>
                 <input type="text" name="category3" /><br>
+            </div>
+            <div class="item">
                 <label for="name4">Item Name</label><br />
                 <input type="text" name="name4" /><br />
                 <label for="category4">Category</label><br>
                 <input type="text" name="category4" /><br>
+            </div>
+            <div class="item">
                 <label for="name5">Item Name</label><br />
                 <input type="text" name="name5" /><br />
                 <label for="category1">Category</label><br>
                 <input type="text" name="category5" /><br>
             </div>
+        </div>
+
+</div>
         <button type="submit">Submit Transaction</button>
       </form>
-    </div>
   </body>
 </html>

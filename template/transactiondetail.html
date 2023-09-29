@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Transaction Detail</title>
+  </head>
+  <body>
+    <nav>
+      <button><a href="/">HOME</a></button>
+      <button><a href="/add">Add Transaction</a></button>
+    </nav>
+    <h1>Transaction Detail</h1>
+    <div>
+      <p>Transaction Id: <%= transctionId %></p>
+      <p>User Id: <%= userId %></p>
+    </div>
+    <table border="1">
+      <tr>
+        <th>No</th>
+        <th>Item Name</th>
+        <th>Huge</th>
+        <th>Liquid</th>
+        <th>Category</th>
+      </tr>
+      <% items.forEach((el,idx)=>{ %>
+      <tr>
+        <td><%= idx+1 %></td>
+        <td><%= el.name %></td>
+        <td><%= el.isDone %></td>
+        <td><%= el.isHuge %></td>
+        <td><%= el.category %></td>
+      </tr>
+      <% }) %>
+    </table>
+    show all sort otomatis by category
+  </body>
+</html>

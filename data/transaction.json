@@ -37,5 +37,35 @@
         "isPaid": true,
         "UserId": 3
 
+    },
+    {
+        "id": 5,
+        "pickUpLocation": "aceh",
+        "dropLocation": "medan",
+        "bill": 4000000,
+        "isDone": true,
+        "isPaid": false,
+        "UserId": 1
+
+    },
+    {
+        "id": 7,
+        "pickUpLocation": "lampung",
+        "dropLocation": "medan",
+        "bill": 4000000,
+        "isDone": true,
+        "isPaid": true,
+        "UserId": 1
+
+    },
+    {
+        "id": 8,
+        "pickUpLocation": "lampung",
+        "dropLocation": "medan",
+        "bill": 4000000,
+        "isDone": false,
+        "isPaid": false,
+        "UserId": 1
+
     }
 ]

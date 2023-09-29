@@ -32,8 +32,24 @@ module.exports = (sequelize, DataTypes) => {
     }},
     status: DataTypes.STRING
   }, {
+    hooks: {
+      beforeCreate: (user, options) => {
+        let category = user.category;
+        let category_code = "001";
+        if (category === "Mart") {
+          category_code = "001";
+        } else if (category === "Midi") {
+          category_code = "002";
+        } else if (category_code === "Exspress") {
+          category_code = "003";
+        }
+        let timestamp = new Date().getTime();
+        let code = `${category_code}-${timestamp}`;
+        user.code = code;
+      },
+    },
     sequelize,
-    modelName: 'TransactionItems',
+    modelName: "Store",
   });
   return TransactionItems;
 };

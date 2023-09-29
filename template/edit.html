@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Edit transaction</title>
+    <style>
+      body {
+        font-size: 17px;
+      }
+
+      .right {
+        border: 1px solid red;
+        width: 200px;
+        padding: 10px;
+        margin: 20px;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .additem {
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+      }
+      .container {
+        display: flex;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <button><a href="">landing</a></button>
+      <button><a href="">add transaction</a></button>
+    </nav>
+    <h1>Add Transaction</h1>
+    <div class="container">
+      <form action="/add" method="post" id="addtrasaction">
+        <label for="pickUpLocation">Pick Up Location</label><br />
+        <input type="text" name="pickUpLocation" id="" required /><br />
+        <label for="dropLocation">Drop Off Location</label><br />
+        <input type="text" name="dropLocation" id="" required /><br />
+        <label for="bill">Bill</label><br />
+        <input type="number" name="bill" /><br /><br />
+        <button type="submit" form="add">Submit Transaction</button>
+        <div class="additem">
+          <div class="item1">
+            <label for="name1">Item Name</label><br />
+            <input type="text" name="name1" /><br />
+            <label for="category1">Category</label>
+            <input type="text" name="category1" />
+          </div>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
