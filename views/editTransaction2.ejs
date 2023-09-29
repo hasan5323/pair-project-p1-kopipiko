@@ -6,12 +6,11 @@
     <title>Document</title>
 </head>
 <body>
-    <div style="display: flex; justify-content: center;"><h1>Add Transaction</h1></div>
+    <div style="display: flex; justify-content: center;"><h1>Edit Transaction</h1></div>
     <div>
-        <form action="/add/<%= idUser %>" method="post">
+        <form action="/edit/<%= idUser %>" method="post">
             <label for="">Category</label>
             <select name="name" id="">
-                <option value="" selected>------</option>
                 <% dataOption[0].forEach((element) => {%>
                     <option value=""><%= element.name %></option>
                 <% }) %>
@@ -33,12 +32,12 @@
                 <option value="false" selected>N</option>
             </select><br>
             <label for="">Pick Up Location</label>
-            <input type="text" name="pickUpLocation"><br>
+            <input type="text" name="pickUpLocation" value="<%= dataOption[2][0].pickUpLocation %>"><br>
             <label for="">Drop Location</label>
-            <input type="text" name="dropLocation"><br>
+            <input type="text" name="dropLocation" value="<%= dataOption[2][0].dropLocation %>"><br>
             <label for="">Bill</label>
-            <input type="number" name="bill"><br>
-            <button type="submit">Add</button>
+            <input type="number" name="bill" value="<%= dataOption[2][0].bill %>"><br>
+            <button type="submit">Update</button>
         </form>
     </div>
 </body>

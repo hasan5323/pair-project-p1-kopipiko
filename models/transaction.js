@@ -51,6 +51,12 @@ module.exports = (sequelize, DataTypes) => {
       },
     },
     {
+      hooks:{
+        beforeCreate:(instance, options)=>{
+          instance.isPaid = false,
+          instance.isDone = false
+        }
+      },
       sequelize,
       modelName: "Transaction",
     }

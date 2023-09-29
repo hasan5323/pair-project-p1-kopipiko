@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a href="/landing">Home</a>
+        <div style="display: flex; text-align: center; justify-content: center;"><h1>Detail Transaction</h1></div>
+        <div>
+            <h3>User Id : <%= user.id %></h3>
+        </div>
+        <table border="1px">
+            <thead>
+                <tr>
+                    <th>No</th>
+                    <th>Nama Item</th>
+                    <th>Huge</th>
+                    <th>Liquid</th>
+                    <th>Kategori</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% result.forEach((element, i)=>{ %>
+                    <tr>
+                        <td><%= i+1 %></td>
+                        <td><%= element.Item.name %></td>
+                        <td><%= element.Item.isHuge == true? "Barang Besar":"Kecil aja itu" %></td>
+                        <td><%= element.Item.isLiquid == true? "Cair":"Padat" %></td>
+                        <td><%= element.Item.Category.name %></td>
+                    </tr>
+                <% }) %>
+            </tbody>
+        </table>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <a href="/add/<%= data.id %>">Add Transaction</a>
+    </div>
+    <div style="display: flex; flex-direction: row;align-items: center;">
+        <div>
+            <p>Username : <%= data.username %></p>
+            <p>Email : <%= data.email %></p>
+            <p>Role : <%= data.role %></p>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 10px; justify-content: right;">
+            <button type="button" onclick="document.location='/profile/<%=data.id%>'">To Profile</button>
+            <button type="button" onclick="document.location='/logout'">Logout</button>
+            <button type="button" onclick="document.location=''">History</button>
+        </div>
+    </div>
+    <div>
+        <button value="" name="">ALL</button>
+        <button value="false" name="isPaid">Not Paid</button>
+        <button value="false" name="isDone">Uncomplete</button>
+    </div>
+    <div>
+        <table border="1px">
+            <thead>
+                <tr>
+                    <th>No</th>
+                    <th>Pick Up Location</th>
+                    <th>Drop Location</th>
+                    <th>Bill</th>
+                    <th>Progress</th>
+                    <th>Payment</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% result[0].Transactions.forEach((element, no) => {%>
+                    <tr>
+                        <td><%= no+1 %></td>
+                        <td><%= element.pickUpLocation %></td>
+                        <td><%= element.dropLocation %></td>
+                        <td><%= helper(element.bill) %></td>
+                        <td><%= element.isPaid === false? "Not Complete" : "Complete" %></td>
+                        <td><%= element.isDone === false? "Not Paid" : "Paid" %></td>
+                        <td>
+                            <a href="/detail/<%= element.id %>">Details</a>
+                            <a href="/delete/<%= element.id %>">Delete</a>
+                            <a href="/edit/<%= element.id %>">Edit</a>
+                        </td>
+                    </tr>
+                <% }) %>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
